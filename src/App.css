@@ -1,0 +1,115 @@
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.google-search {
+  margin: 0 auto;
+  position: relative;
+  width: 760px;
+}
+
+#search-form {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border-radius: 50px;
+}
+.search-input {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  border-top-left-radius: inherit;
+  border-bottom-left-radius: inherit;
+  border: 1px solid rgb(200, 200, 200);
+  border-top-left-radius: inherit;
+}
+
+.search-input > svg {
+  width: 0;
+  transform-origin: right;
+  transition: all .2s ease;
+}
+
+#search {
+  outline: none;
+  border: none;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  font-size: large;
+  border-top-left-radius: inherit;
+  border-bottom-left-radius: inherit;
+}
+
+.search-input:focus-within {
+  border: 1px solid rgb(0, 128, 255);
+  > svg {
+      margin-left: 25px;
+      width: 25px;
+  }
+}
+
+#submit {
+  outline: none;
+  border: none;
+  display: inline-block;
+  width: 80px;
+  padding: 14px;
+  border-top-right-radius: inherit;
+  border-bottom-right-radius: inherit;
+  border: 1px solid rgb(200, 200, 200);
+  background-color: (244, 244, 244);
+  border-left-color: transparent;
+  text-align: center;
+  cursor: pointer;
+  transition: all .2s ease;
+}
+
+#submit:hover {
+  background-color: rgb(235, 235, 235);
+}
+
+.suggestions-body {
+  position: absolute;
+  content: 0;
+  top: 100%;
+  left: 0;
+  width: calc(760px - 80px - 7px);
+  box-shadow: 0px 1px 3px 0px gray;
+  border-radius: 5px;
+  margin-top: 15px;
+  transition: .2s all ease;
+  transform-origin: top center;
+}
+
+.suggestions-body ul {
+  list-style-type: none;
+  padding: 0;
+  li {
+      display: flex;
+      align-items: center;
+      padding: 15px;
+      gap: 15px;
+      span {
+          flex: 1;
+      }
+  }
+  li:hover {
+          background-color: rgb(240,240,240);
+          cursor: pointer;
+  }
+}
+.card {
+  border: '1px solid #ddd';
+  border-radius: '8px';
+  padding: '20px';
+  width: '300px';
+  box-shadow: '0 4px 8px rgba(0, 0, 0, 0.1)';
+  background-color: '#f9f9f9';
+  box-shadow: 0px 1px 3px 0px gray;
+  margin: 20px 0;
+  padding: 10px;
+  border-radius: 5px;
+}
